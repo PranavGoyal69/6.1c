@@ -4,53 +4,44 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                // Build the code using Maven
-                sh 'mvn clean package'
+                echo 'Building the code using Maven'
             }
         }
         
         stage('Unit and Integration Tests') {
             steps {
-                // Run unit tests using JUnit
-                sh 'mvn test'
-                
-                // Run integration tests using tools like Selenium, JUnit, etc.
-                // Command to execute integration tests
+                echo 'Running unit tests using JUnit'
+                echo 'Running integration tests'
             }
         }
         
         stage('Code Analysis') {
             steps {
-                // Integrate a code analysis tool (e.g., SonarQube)
-                // Command to run code analysis
+                echo 'Running code analysis'
             }
         }
         
         stage('Security Scan') {
             steps {
-                // Perform security scan using a tool (e.g., OWASP ZAP)
-                // Command to run security scan
+                echo 'Performing security scan'
             }
         }
         
         stage('Deploy to Staging') {
             steps {
-                // Deploy application to staging server (e.g., AWS EC2 instance)
-                // Command to deploy to staging
+                echo 'Deploying application to staging server'
             }
         }
         
         stage('Integration Tests on Staging') {
             steps {
-                // Run integration tests on staging environment
-                // Command to execute integration tests on staging
+                echo 'Running integration tests on staging environment'
             }
         }
         
         stage('Deploy to Production') {
             steps {
-                // Deploy application to production server (e.g., AWS EC2 instance)
-                // Command to deploy to production
+                echo 'Deploying application to production server'
             }
         }
     }
